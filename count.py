@@ -3,7 +3,7 @@ import pandas as pd #pip install pandas
 from supabase import create_client, Client #pip install streamlit supabase
 
 url = st.secrets["supabase"]["url"]
-key = st.secrets["supabase"]["key"]
+key = st.secrets["supabase"]["service_key"]
 supabase: Client = create_client(url, key)
 
 def load_data():
