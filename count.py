@@ -10,7 +10,6 @@ url = st.secrets["supabase"]["url"]
 key = st.secrets["supabase"]["service_key"]
 supabase: Client = create_client(url, key)
 
-@st.cache_data
 def load_data():
     response = supabase.table("mmaconn").select("date").execute()
     data = response.data
